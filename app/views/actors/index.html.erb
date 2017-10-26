@@ -1,0 +1,20 @@
+<div class="main actor-index">
+      <div class="container">
+        <div class="row">
+      </div>
+</div>
+
+
+
+  <div class="main">
+  <div class="container">
+  <h2>Actors</h2>
+    <% @actors.each do |actor| %>
+    <div class="actor">
+      <%= image_tag actor.image %>
+      <h3><%= actor.first_name %></h3>
+      <p><%= actor.last_name %></p>
+    </div>
+    <% end %>
+  </div>
+</div>

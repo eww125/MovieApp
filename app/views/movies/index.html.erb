@@ -6,21 +6,18 @@
   </div>
 </div>
 
+
 <div class="main">
   <div class="container">
   <h2>Popular Films</h2>
-
-    <!--
-    To do: Loop through movies and display each one with this HTML-->
-
+    <% @movies.each do |movie| %>
     <div class="movie">
-       <%= image_tag @movie.image %>
-      <% @movies.each do |t| %>
-
-      <h3> t.title </h3>
-      <p> t.release_year </p>
+      <%= image_tag movie.image %>
+      <h3><%= movie.title %></h3>
+      <p><%= movie.release_year %></p>
+      <p><%= movie.plot %></p>
+      <%= link_to "Learn more", movie_path(movie) %>
     </div>
-
-
+    <% end %>
   </div>
 </div>
